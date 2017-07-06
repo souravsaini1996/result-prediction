@@ -1,9 +1,3 @@
-from peewee import MySQLDatabase
+from peewee import SqliteDatabase
 
-db = MySQLDatabase(
-	'predictions',
-	host='localhost',
-	port=3306,
-	user='root',
-	password='sourav'	
-)
+db = SqliteDatabase('prediction')
