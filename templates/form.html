@@ -1,0 +1,260 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block content %} 
+
+<h1 class="text-center" id="change_font">Please fill the form</h1>
+
+<h3>{{ gender }}</h3>
+
+<form action="" method="POST">
+	<div class="col-md-4">
+		<div class="form-group">
+			<label for="">Name</label>
+			<input type="text" class="form-control" name="name" placeholder="Enter your name" required>
+		</div>
+		<div class="form-group">
+			<label for="">Age</label>
+			<input type="number" class="form-control" name="age" min="2" value="18" required>
+		</div>
+		<div class="form-group">
+			<label for="">Gender</label><br>
+			<label class="form-inline">
+				<input type="radio" name="gender" value="M" checked> Male
+			</label>
+			<label class="form-inline">
+				<input type="radio" name="gender" value="F"> Female
+			</label>
+		</div>
+		<div class="form-group">
+			<label for="">Family Members</label>
+			<input type="number" class="form-control" min=1 value="4" name="fmembers" required>
+		</div>
+		<div class="form-group">
+			<label for="">Cohabitation status</label>
+			<select id="cohabitation" class="form-control">
+				<option value="together">Together</option>
+				<option value="apart">Apart</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Area</label><br>
+			<label class="form-inline">
+				<input type="radio" name="area" checked> Urban
+			</label>
+			<label class="form-inline">
+				<input type="radio" name="area"> Rural
+			</label>
+		</div>
+		<div class="form-group">
+			<label for="">Father's education</label>
+			<select id="father_edu" name="father_edu" class="form-control">
+				<option value="0">None</option>
+				<option value="1">Primary</option>
+				<option value="2">Matriculation</option>
+				<option value="3">Secondary</option>
+				<option value="4">Higher</option>	
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Mother's education</label>
+			<select id="mother_edu" class="form-control">
+				<option value="0">None</option>
+				<option value="1">Primary</option>
+				<option value="2">Matriculation</option>
+				<option value="3">Secondary</option>
+				<option value="4">Higher</option>	
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Father's job</label>
+			<select name="" class="form-control">
+				<option value="teacher">Teacher</option>
+				<option value="health">Health care services</option>
+				<option value="services">Civil services</option>
+				<option value="at_home">At home</option>
+				<option value="others">Others</option>	
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Mother's job</label>
+			<select name="" class="form-control">
+				<option value="teacher">Teacher</option>
+				<option value="health">Health care services</option>
+				<option value="services">Civil services</option>
+				<option value="at_home">At home</option>
+				<option value="others">Others</option>	
+			</select>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="form-group">
+			<label for="">Reason to choose this college?</label>
+			<select name="" class="form-control">
+				<option value="home">Close to home</option>
+				<option value="reputition">Reputition</option>
+				<option value="course">Course preference</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Guardian</label>
+			<select name="" class="form-control">
+				<option value="father">Father</option>
+				<option value="mother">Mother</option>
+				<option value="other">Other</option>	
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Travel Time </label>
+			<select name="" class="form-control">
+				<option value="1">Less than 15 mins</option>
+				<option value="2">15 to 30 mins</option>
+				<option value="3">30 min to 1 hour</option>
+				<option value="4">More than 1 hour</option>	
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Weekly Study Time </label>
+			<select name="" class="form-control">
+				<option value="1">Less than 2 hours</option>
+				<option value="2">2 to 5 hours</option>
+				<option value="3">6 to 10 hours</option>
+				<option value="4">More than 10 hours</option>	
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">No.of past class failures? </label>
+			<select name="" class="form-control">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>	
+				<option value="4">More than 3</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Extra educational support? </label><br>
+			<label class="form-inline">
+				<input type="radio" name="extra_edu" checked> Yes
+			</label>
+			<label class="form-inline">
+				<input type="radio" name="extra_edu"> No
+			</label>
+		</div>
+		<div class="form-group">
+			<label for="">Family educational support? </label><br>
+			<label class="form-inline">
+				<input type="radio" name="family_edu" checked> Yes
+			</label>
+			<label class="form-inline">
+				<input type="radio" name="fmaily_edu"> No
+			</label>
+		</div>
+		<div class="form-group">
+			<label for="">Extra paid classes? </label><br>
+			<label class="form-inline">
+				<input type="radio" name="extra_paid" checked> Yes
+			</label>
+			<label class="form-inline">
+				<input type="radio" name="extra_paid"> No
+			</label>
+		</div>
+		<div class="form-group">
+			<label for="">Extra curricular activities? </label><br>
+			<label class="form-inline">
+				<input type="radio" name="extra_curricular" checked> Yes
+			</label>
+			<label class="form-inline">
+				<input type="radio" name="extra_curricular"> No
+			</label>
+		</div>
+		<div class="form-group">
+			<label for="">Want to go for higher studies? </label><br>
+			<label class="form-inline">
+				<input type="radio" name="higher_studies" checked> Yes
+			</label>
+			<label class="form-inline">
+				<input type="radio" name="higher_studies"> No
+			</label>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="form-group">
+			<label for="">Internet access? </label><br>
+			<label class="form-inline">
+				<input type="radio" name="internet" checked> Yes
+			</label>
+			<label class="form-inline">
+				<input type="radio" name="internet"> No
+			</label>
+		</div>
+		<div class="form-group">
+			<label for="">In a relationship? </label><br>
+			<label class="form-inline">
+				<input type="radio" name="relationship" checked> Yes
+			</label>
+			<label class="form-inline">
+				<input type="radio" name="relationship"> No
+			</label>
+		</div>
+		<div class="form-group">
+			<label for="">Quality of family relationship? </label>
+			<select name="" class="form-control">
+				<option value="1">Very bad</option>
+				<option value="2">Bad</option>
+				<option value="3">Good</option>
+				<option value="4">Very Good</option>	
+				<option value="5">Excellent</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Free time after college? </label>
+			<select name="" class="form-control">
+				<option value="1">Very less</option>
+				<option value="2">Less</option>
+				<option value="3">Average</option>
+				<option value="4">Much </option>	
+				<option value="5">Very much</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Work days alcohol consumption? </label>
+			<select name="" class="form-control">
+				<option value="1">Very low</option>
+				<option value="2">Low</option>
+				<option value="3">Average</option>
+				<option value="4">High</option>	
+				<option value="5">Very High</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Weekend alcohol consumption? </label>
+			<select name="" class="form-control">
+				<option value="1">Very low</option>
+				<option value="2">Low</option>
+				<option value="3">Average</option>
+				<option value="4">High</option>	
+				<option value="5">Very High</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Health status? </label>
+			<select name="" class="form-control">
+				<option value="1">Very bad</option>
+				<option value="2">Bad</option>
+				<option value="3">Average</option>
+				<option value="4">Good</option>	
+				<option value="5">Very Good</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="">Number of absences? </label>
+			<input type="number" min="0" value="0" class="form-control">
+		</div>	 
+	</div>
+	<div class="col-md-4 col-md-offset-6">
+		<button type="submit" class="btn btn-lg btn-success"> Submit Info </button>
+	</div>	
+</form>
+
+{% endblock content %}

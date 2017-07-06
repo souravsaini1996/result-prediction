@@ -1,0 +1,25 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block content %}
+<br><br><br>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-lg-offset-3">
+			<form method="POST">
+				<legend id="change_font" class="text-center"> Please Sign in </legend>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					<input type="text" class="form-control" name="username" placeholder="Enter username" required></input>
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+					<input type="password" class="form-control" name="password" placeholder="Enter password" required></input>
+				</div>
+				<button type="submit" class=" btn btn-success btn-lg"> Login <span class="glyphicon glyphicon-thumbs-up"></span></button>
+				<span> <a id="register" href="{{url_for('register')}}" class="pull-right "> <strong>Not Registered? </strong></a> </span>
+			</form>
+		</div>
+	</div>
+</div>	
+
+{% endblock content %}		

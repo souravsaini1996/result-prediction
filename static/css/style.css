@@ -1,0 +1,37 @@
+@font-face{
+	src : url('../images/font.ttf');
+	font-family: 'text-style';
+}
+
+.container {
+	padding-top: 70px;
+}
+
+.jumbotron{
+	opacity: 0.5;
+}
+
+.navbar-brand, nav li a, #btn{
+	font-variant: small-caps;
+}
+
+#change_font{
+	font-family: 'text-style',sans-serif;
+	font-size: 50px;
+	font-style: bold;
+	color: red;
+}
+
+#register{
+	color:red; 
+	font-size:20px; 
+	text-decoration:none;
+}
+
+body{
+	background-image: url('../images/background.jpg');
+}
+
+label {
+	color: #fff;
+}
